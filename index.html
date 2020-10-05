@@ -1,13 +1,5 @@
-
-
-
-honey-gelatinous-cinema
-
-Show
-index.html
-success: Copied
 <!DOCTYPE html>
-​
+
 <html>
   <head>
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
@@ -27,12 +19,12 @@ success: Copied
       });
     </script>
   </head>
-​
+
   <body>
     <link rel="stylesheet" href="styles.css" />
-​
+
     <div class="hero"></div>
-​
+
     <a-scene>
       <a-assests>
         <audio
@@ -52,9 +44,9 @@ success: Copied
       >
         <a-entity cursor="rayOrigin: mouse"></a-entity>
       </a-entity>
-​
+
       <a-entity laser-controls="hand:right"></a-entity>
-​
+
       <a-gltf-model
         id="dr.mario"
         position="0 1.377 -1.623"
@@ -70,7 +62,7 @@ success: Copied
         scale=".04 .04 .04"
         src="https://cdn.glitch.com/2d84a19e-f5f8-4c65-bff8-0a8972d69bd0%2Fsanitizer.glb?v=1601499285439"
       ></a-gltf-model>
-​
+
       <a-sky
         src="https://cdn.glitch.com/7e18fbf8-9686-4cf7-91f9-4a6bbdb54f5e%2Fsky.jpg?1544174075054"
       ></a-sky>
@@ -86,3 +78,180 @@ success: Copied
         rotation="-90 0 0"
         width="40"
         height="40"
+        repeat="5 4"
+        src="https://cdn.glitch.com/2d84a19e-f5f8-4c65-bff8-0a8972d69bd0%2Ffloor.jpg?v=1601495398436"
+      >
+        <audio
+          id="sound"
+          src="https://cdn.glitch.com/2d84a19e-f5f8-4c65-bff8-0a8972d69bd0%2FDyllan%20-%20Peace%20Out%20Homie.mp3?v=1601857672043 on:click"
+          autoplay="true"
+        ></audio>
+      </a-plane>
+
+      <a-plane
+        position="-1 1.69 -2.5"
+        rotation="0 10 0"
+        scale="2.75 1 1"
+        color="#faaf52"
+      ></a-plane>
+
+      <a-text
+        value="VR Project #1"
+        position="-2.15 2 -2.29"
+        rotation="0 10 0"
+        width="4"
+        color="black"
+      ></a-text>
+      <a-text
+        value="Sudesh Subedi"
+        position="-2.185 1.68 -2.29"
+        rotation="0 10 0"
+        width="2.6"
+        color="black"
+      ></a-text>
+
+      <a-plane
+        position="2 1 -2.5"
+        rotation="0 -10 0"
+        scale="2 .8 1"
+        color="#faaf52"
+      ></a-plane>
+      <a-text
+        value="Click on this weird thing to make it go crazy"
+        position="1.12 1.23 -2.6"
+        rotation="0 -10 0"
+        width="1.9"
+        color="black"
+      ></a-text>
+      <a-text
+        value="Click on that yellow object to play song------>"
+        position="1.09 1 -2.6"
+        rotation="0 -10 0"
+        width="1.9"
+        color="black"
+      ></a-text>
+
+      <a-text
+        value="ITS alright"
+        position="1.26 .75 -2.6"
+        rotation="0 -10 0"
+        width="1.5"
+        color="black"
+      ></a-text>
+
+      <a-dodecahedron position="-8 2 -1" color="yellow"></a-dodecahedron>
+      <!--play -- and stop control -->
+      <a-sphere
+        position="10 2 0"
+        color="orange"
+        scale=".6 .6 .6"
+        sound="src: #peace; on: click; volume: 1; refDistance: 1; rollofFactor: 1"
+      ></a-sphere>
+      <a-sphere position="10 1.5 -1" color="brown" scale=".4 .4 .4" stop>
+      </a-sphere>
+      <a-sphere position="10 1.5 1" color="brown" scale=".4 .4 .4" stop>
+      </a-sphere>
+      <a-sphere position="10 2.7 .8" color="brown" scale=".4 .4 .4"
+                stop>
+                </a-sphere>
+
+      <a-plane position="0 1.5 -15" color="#643200" scale="30 3 30"></a-plane>
+      <a-plane
+        position="15 1.5 0"
+        rotation="0 -90 0"
+        color="#643200"
+        scale="30 3 30"
+      ></a-plane>
+      <a-plane
+        position="0 1.5 15"
+        rotation="0 180 0"
+        color="#643200"
+        scale="30 3 30"
+      ></a-plane>
+      <a-plane
+        position="-15 1.5 0"
+        rotation="0 90 0"
+        color="#643200"
+        scale="30 3 30"
+      ></a-plane>
+
+      <a-box position="4 1 -8" scale="2 2 2" color="black"></a-box>
+      <a-torus-knot
+        position="4 4 -8"
+        rotation="0 0 0"
+        scale="1 1 1"
+        color="#408080"
+      >
+        <a-animation
+          attribute="position"
+          to="4 4.5 -8"
+          direction="alternate"
+          dur="2000"
+          repeat="indefinite"
+        ></a-animation>
+
+        <a-animation
+          attribute="scale"
+          begin="mouseenter"
+          dur="300"
+          to="2.3 2.3 2.3"
+        >
+        </a-animation>
+
+        <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1">
+        </a-animation>
+
+        <a-animation
+          attribute="rotation"
+          begin="click"
+          dur="2000"
+          to="360 405 45"
+        >
+        </a-animation>
+
+        <a-cursor color="white"></a-cursor>
+      </a-torus-knot>
+
+      <a-box
+        position="-10 1 -10"
+        scale=".5 2 .5"
+        color="#552b00"
+        sound="src #peace; on: click"
+      ></a-box>
+      <a-cone position="-10 3.2 -10" color="green" scale="1 3 1"></a-cone>
+
+      <a-box position="-9 1 -12" scale=".5 2 .5" color="#552b00"></a-box>
+      <a-cone position="-9 3.2 -12" scale="1 3 1" color="green"></a-cone>
+
+      <!-- tree -->
+      <a-box position="10 1 10" scale=".5 2 .5" color="#552b00"></a-box>
+      <a-cone position="10 3.2 10" color="black" scale="1 3 1"></a-cone>
+
+      <!-- tree -->
+      <a-box position="9 1 12" scale=".5 2 .5" color="#552b00"></a-box>
+      <a-cone position="9 3.2 12" scale="1 3 1" color="green"></a-cone>
+
+      <a-box
+        position="-8 3 10"
+        rotation="0 -45 0"
+        scale="6 2 2"
+        color="#80ffff"
+      ></a-box>
+      <a-box
+        position="-8 1 10"
+        rotation="0 -45 0"
+        scale="1 2 1"
+        color="#592d00"
+      ></a-box>
+
+      <a-box position="0 1 10" scale="2 2 2" color="black"> </a-box>
+      <a-tetrahedron
+        position="0 3.5 10"
+        rotation="-12 -180 65"
+        color="#FF926B"
+        radius="5"
+        scale=".5 .5 .5"
+      ></a-tetrahedron>
+    </a-scene>
+  </body>
+</html>
